@@ -1,0 +1,32 @@
+[
+  {
+    "g_foc_measure_l.status": 2,
+    "g_foc_measure_l.reason": 0,
+    "g_foc_measure_l.result_valid": 1,
+    "g_foc_measure_l.valid_samples": 256,
+    "g_foc_measure_l.inductance_uh": 54.55618667602539,
+    "g_foc_measure_l.rotor_error_deg": -0.0604248046875,
+    "g_foc_measure_l.rotor_speed_rad_s": -0.028332214802503586,
+    "MotorControl.ModeNow": "0 (Motor_Disable)"
+  },
+  {
+    "g_foc_measure_l.status": 2,
+    "g_foc_measure_l.reason": 0,
+    "g_foc_measure_l.result_valid": 1,
+    "g_foc_measure_l.valid_samples": 256,
+    "g_foc_measure_l.inductance_uh": 54.431583404541016,
+    "g_foc_measure_l.rotor_error_deg": 0.0,
+    "g_foc_measure_l.rotor_speed_rad_s": -0.012372372671961784,
+    "MotorControl.ModeNow": "0 (Motor_Disable)"
+  },
+  {
+    "g_foc_measure_l.status": 2,
+    "g_foc_measure_l.reason": 0,
+    "g_foc_measure_l.result_valid": 1,
+    "g_foc_measure_l.valid_samples": 256,
+    "g_foc_measure_l.inductance_uh": 54.416202545166016,
+    "g_foc_measure_l.rotor_error_deg": -0.0274658203125,
+    "g_foc_measure_l.rotor_speed_rad_s": 0.08795314282178879,
+    "MotorControl.ModeNow": "0 (Motor_Disable)"
+  }
+]

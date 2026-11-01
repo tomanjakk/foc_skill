@@ -1,0 +1,1340 @@
+{
+  "initial": {
+    "MotorControl.ModeNow": "0 (Motor_Disable)",
+    "FOC.Vbus_filt": 29.922836303710938,
+    "Encoder.theta_mech": 0.018664607778191566,
+    "MotorControl.current_limit": 30.020000457763672,
+    "MotorControl.speed_limit": 503.1156005859375,
+    "MotorControl.pos_maxspeed": 12.566370964050293,
+    "MotorControl.posRef": -0.018603036180138588,
+    "MotorControl.posAcc": 12.566370964050293,
+    "MotorControl.posDec": 12.566370964050293
+  },
+  "segments": [
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\000_small.json",
+      "label": "small",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2524,
+        "complete_samples": 2524,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 77.91227722167969,
+      "peak_speed_ref": 78.02227783203125,
+      "peak_iq_ref": 0.3782489597797394,
+      "peak_tracking_error_rad": 0.0017337799072265625,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": 10.0,
+        "Traj.profile_done": true,
+        "Traj.Y": -10.0,
+        "Traj.Yd": 0.0,
+        "Encoder.theta_mech": -9.999980926513672,
+        "Encoder.vel_mech": -0.051239628344774246,
+        "MotorControl.iqRef": 0.0,
+        "FOC.Vbus_filt": 29.86359405517578,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\001_small.json",
+      "label": "small",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2514,
+        "complete_samples": 2514,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 218.85641479492188,
+      "peak_speed_ref": 218.0,
+      "peak_iq_ref": 0.7069193720817566,
+      "peak_tracking_error_rad": 0.005555152893066406,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": -30.0,
+        "Traj.profile_done": true,
+        "Traj.Y": 30.0,
+        "Traj.Yd": 0.0,
+        "Encoder.theta_mech": 29.99803352355957,
+        "Encoder.vel_mech": 0.06909096240997314,
+        "MotorControl.iqRef": 0.0,
+        "FOC.Vbus_filt": 29.856897354125977,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\002_small.json",
+      "label": "small",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2519,
+        "complete_samples": 2519,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 219.5010986328125,
+      "peak_speed_ref": 218.0,
+      "peak_iq_ref": 0.6744265556335449,
+      "peak_tracking_error_rad": 0.005398750305175781,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": 30.0,
+        "Traj.profile_done": true,
+        "Traj.Y": -30.0,
+        "Traj.Yd": 0.0,
+        "Encoder.theta_mech": -29.99995994567871,
+        "Encoder.vel_mech": 0.041587233543395996,
+        "MotorControl.iqRef": 0.0,
+        "FOC.Vbus_filt": 29.859092712402344,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\003_small.json",
+      "label": "small",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2518,
+        "complete_samples": 2518,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 211.40872192382812,
+      "peak_speed_ref": 212.17527770996094,
+      "peak_iq_ref": 0.7218014597892761,
+      "peak_tracking_error_rad": 0.0052623748779296875,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": 0.0,
+        "Traj.profile_done": true,
+        "Traj.Y": -0.0,
+        "Traj.Yd": 0.0,
+        "Encoder.theta_mech": -0.0005189499352127314,
+        "Encoder.vel_mech": 0.016008500009775162,
+        "MotorControl.iqRef": 0.0,
+        "FOC.Vbus_filt": 29.85740089416504,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\004_medium.json",
+      "label": "medium",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2543,
+        "complete_samples": 2543,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 219.24951171875,
+      "peak_speed_ref": 218.0,
+      "peak_iq_ref": 0.70952308177948,
+      "peak_tracking_error_rad": 0.006145477294921875,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": 100.0,
+        "Traj.profile_done": true,
+        "Traj.Y": -100.0,
+        "Traj.Yd": 0.0,
+        "Encoder.theta_mech": -99.9974136352539,
+        "Encoder.vel_mech": 0.056625962257385254,
+        "MotorControl.iqRef": 0.0,
+        "FOC.Vbus_filt": 29.863327026367188,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\005_medium.json",
+      "label": "medium",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2541,
+        "complete_samples": 2541,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 219.07386779785156,
+      "peak_speed_ref": 218.0,
+      "peak_iq_ref": 0.7251982688903809,
+      "peak_tracking_error_rad": 0.00533294677734375,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": -100.0,
+        "Traj.profile_done": false,
+        "Traj.Y": 80.99252319335938,
+        "Traj.Yd": 20.0,
+        "Encoder.theta_mech": 78.44076538085938,
+        "Encoder.vel_mech": 218.0635986328125,
+        "MotorControl.iqRef": 0.5975345373153687,
+        "FOC.Vbus_filt": 29.8729190826416,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\006_medium.json",
+      "label": "medium",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2525,
+        "complete_samples": 2525,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 72.68378448486328,
+      "peak_speed_ref": 72.55669403076172,
+      "peak_iq_ref": 0.34342795610427856,
+      "peak_tracking_error_rad": 0.00147247314453125,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": -100.0,
+        "Traj.profile_done": true,
+        "Traj.Y": 100.0,
+        "Traj.Yd": 0.0,
+        "Encoder.theta_mech": 99.9993896484375,
+        "Encoder.vel_mech": 0.01588137447834015,
+        "MotorControl.iqRef": 0.0,
+        "FOC.Vbus_filt": 29.864810943603516,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\007_medium.json",
+      "label": "medium",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2508,
+        "complete_samples": 2508,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 219.17703247070312,
+      "peak_speed_ref": 218.0,
+      "peak_iq_ref": 0.6852532029151917,
+      "peak_tracking_error_rad": 0.005615234375,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": 0.0,
+        "Traj.profile_done": true,
+        "Traj.Y": -0.0,
+        "Traj.Yd": 0.0,
+        "Encoder.theta_mech": 0.0009411465143784881,
+        "Encoder.vel_mech": -0.04519454389810562,
+        "MotorControl.iqRef": 0.0,
+        "FOC.Vbus_filt": 29.859853744506836,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\008_full.json",
+      "label": "full",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2501,
+        "complete_samples": 2501,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 219.04379272460938,
+      "peak_speed_ref": 218.0,
+      "peak_iq_ref": 0.7517009973526001,
+      "peak_tracking_error_rad": 0.005519866943359375,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": -500.0,
+        "Traj.profile_done": false,
+        "Traj.Y": 147.48849487304688,
+        "Traj.Yd": 20.0,
+        "Encoder.theta_mech": 144.6357879638672,
+        "Encoder.vel_mech": 218.26283264160156,
+        "MotorControl.iqRef": 0.5548266172409058,
+        "FOC.Vbus_filt": 29.87605094909668,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\009_full.json",
+      "label": "full",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2514,
+        "complete_samples": 2514,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 219.0508575439453,
+      "peak_speed_ref": 218.0,
+      "peak_iq_ref": 0.6551557779312134,
+      "peak_tracking_error_rad": 0.004241943359375,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": -500.0,
+        "Traj.profile_done": false,
+        "Traj.Y": 309.9084777832031,
+        "Traj.Yd": 20.0,
+        "Encoder.theta_mech": 307.19354248046875,
+        "Encoder.vel_mech": 218.62850952148438,
+        "MotorControl.iqRef": 0.5572636723518372,
+        "FOC.Vbus_filt": 29.87884521484375,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\010_full.json",
+      "label": "full",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2502,
+        "complete_samples": 2502,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 219.11251831054688,
+      "peak_speed_ref": 218.0,
+      "peak_iq_ref": 0.6477667689323425,
+      "peak_tracking_error_rad": 0.00421142578125,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": -500.0,
+        "Traj.profile_done": false,
+        "Traj.Y": 472.5445251464844,
+        "Traj.Yd": 20.0,
+        "Encoder.theta_mech": 469.7108154296875,
+        "Encoder.vel_mech": 218.38812255859375,
+        "MotorControl.iqRef": 0.5729362368583679,
+        "FOC.Vbus_filt": 29.869186401367188,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\011_full.json",
+      "label": "full",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2534,
+        "complete_samples": 2534,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 141.12576293945312,
+      "peak_speed_ref": 141.02398681640625,
+      "peak_iq_ref": 0.4941996932029724,
+      "peak_tracking_error_rad": 0.003326416015625,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": -500.0,
+        "Traj.profile_done": true,
+        "Traj.Y": 500.0,
+        "Traj.Yd": 0.0,
+        "Encoder.theta_mech": 499.9992980957031,
+        "Encoder.vel_mech": 0.031882550567388535,
+        "MotorControl.iqRef": 0.0,
+        "FOC.Vbus_filt": 29.831933975219727,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\012_full.json",
+      "label": "full",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2520,
+        "complete_samples": 2520,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 219.20777893066406,
+      "peak_speed_ref": 218.0,
+      "peak_iq_ref": 0.7099245190620422,
+      "peak_tracking_error_rad": 0.00543212890625,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": 500.0,
+        "Traj.profile_done": false,
+        "Traj.Y": 352.8714904785156,
+        "Traj.Yd": -20.0,
+        "Encoder.theta_mech": 355.62738037109375,
+        "Encoder.vel_mech": -217.77731323242188,
+        "MotorControl.iqRef": -0.5158528089523315,
+        "FOC.Vbus_filt": 29.87801170349121,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\013_full.json",
+      "label": "full",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2519,
+        "complete_samples": 2519,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 219.29212951660156,
+      "peak_speed_ref": 218.0,
+      "peak_iq_ref": 0.6985248923301697,
+      "peak_tracking_error_rad": 0.0037841796875,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": 500.0,
+        "Traj.profile_done": false,
+        "Traj.Y": 188.38348388671875,
+        "Traj.Yd": -20.0,
+        "Encoder.theta_mech": 191.05841064453125,
+        "Encoder.vel_mech": -217.86265563964844,
+        "MotorControl.iqRef": -0.6056983470916748,
+        "FOC.Vbus_filt": 29.871171951293945,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\014_full.json",
+      "label": "full",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2535,
+        "complete_samples": 2535,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 219.2664031982422,
+      "peak_speed_ref": 218.0,
+      "peak_iq_ref": 0.6529031991958618,
+      "peak_tracking_error_rad": 0.0032806396484375,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": 500.0,
+        "Traj.profile_done": false,
+        "Traj.Y": 26.9114990234375,
+        "Traj.Yd": -20.0,
+        "Encoder.theta_mech": 29.565237045288086,
+        "Encoder.vel_mech": -217.99459838867188,
+        "MotorControl.iqRef": -0.5757735371589661,
+        "FOC.Vbus_filt": 29.87696075439453,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\015_full.json",
+      "label": "full",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2519,
+        "complete_samples": 2519,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 219.3085479736328,
+      "peak_speed_ref": 218.0,
+      "peak_iq_ref": 0.6769139170646667,
+      "peak_tracking_error_rad": 0.003147125244140625,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": 500.0,
+        "Traj.profile_done": false,
+        "Traj.Y": -136.54049682617188,
+        "Traj.Yd": -20.0,
+        "Encoder.theta_mech": -133.78515625,
+        "Encoder.vel_mech": -217.70169067382812,
+        "MotorControl.iqRef": -0.5271227955818176,
+        "FOC.Vbus_filt": 29.823760986328125,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\016_full.json",
+      "label": "full",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2546,
+        "complete_samples": 2546,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 219.30369567871094,
+      "peak_speed_ref": 218.0,
+      "peak_iq_ref": 0.6407906413078308,
+      "peak_tracking_error_rad": 0.0032958984375,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": 500.0,
+        "Traj.profile_done": false,
+        "Traj.Y": -315.9125061035156,
+        "Traj.Yd": -20.0,
+        "Encoder.theta_mech": -313.0753173828125,
+        "Encoder.vel_mech": -217.72042846679688,
+        "MotorControl.iqRef": -0.5654118657112122,
+        "FOC.Vbus_filt": 29.874385833740234,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\017_full.json",
+      "label": "full",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2523,
+        "complete_samples": 2523,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 219.34503173828125,
+      "peak_speed_ref": 218.0,
+      "peak_iq_ref": 0.6552741527557373,
+      "peak_tracking_error_rad": 0.004302978515625,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": 500.0,
+        "Traj.profile_done": false,
+        "Traj.Y": -487.1056823730469,
+        "Traj.Yd": -18.001935958862305,
+        "Encoder.theta_mech": -484.4502258300781,
+        "Encoder.vel_mech": -217.6107635498047,
+        "MotorControl.iqRef": -0.5502540469169617,
+        "FOC.Vbus_filt": 29.867206573486328,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\018_full.json",
+      "label": "full",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2526,
+        "complete_samples": 2526,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 46.08707809448242,
+      "peak_speed_ref": 46.0317268371582,
+      "peak_iq_ref": 0.33491837978363037,
+      "peak_tracking_error_rad": 0.00140380859375,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": 500.0,
+        "Traj.profile_done": true,
+        "Traj.Y": -500.0,
+        "Traj.Yd": 0.0,
+        "Encoder.theta_mech": -499.9989318847656,
+        "Encoder.vel_mech": -0.04205069690942764,
+        "MotorControl.iqRef": 0.0,
+        "FOC.Vbus_filt": 29.861238479614258,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\019_full.json",
+      "label": "full",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2540,
+        "complete_samples": 2540,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 218.980712890625,
+      "peak_speed_ref": 218.0,
+      "peak_iq_ref": 0.7066270112991333,
+      "peak_tracking_error_rad": 0.0054931640625,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": -500.0,
+        "Traj.profile_done": false,
+        "Traj.Y": -365.011474609375,
+        "Traj.Yd": 20.0,
+        "Encoder.theta_mech": -367.9256286621094,
+        "Encoder.vel_mech": 218.01861572265625,
+        "MotorControl.iqRef": 0.5782767534255981,
+        "FOC.Vbus_filt": 29.863744735717773,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\020_full.json",
+      "label": "full",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2541,
+        "complete_samples": 2541,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 218.92050170898438,
+      "peak_speed_ref": 218.0,
+      "peak_iq_ref": 0.6502286195755005,
+      "peak_tracking_error_rad": 0.004364013671875,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": -500.0,
+        "Traj.profile_done": false,
+        "Traj.Y": -213.06350708007812,
+        "Traj.Yd": 20.0,
+        "Encoder.theta_mech": -215.9190216064453,
+        "Encoder.vel_mech": 217.39840698242188,
+        "MotorControl.iqRef": 0.5837604999542236,
+        "FOC.Vbus_filt": 29.869033813476562,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\021_full.json",
+      "label": "full",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2512,
+        "complete_samples": 2512,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 218.9827117919922,
+      "peak_speed_ref": 218.0,
+      "peak_iq_ref": 0.6535810828208923,
+      "peak_tracking_error_rad": 0.004302978515625,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": -500.0,
+        "Traj.profile_done": false,
+        "Traj.Y": -60.947479248046875,
+        "Traj.Yd": 20.0,
+        "Encoder.theta_mech": -63.64141082763672,
+        "Encoder.vel_mech": 217.8446044921875,
+        "MotorControl.iqRef": 0.5888669490814209,
+        "FOC.Vbus_filt": 29.8797550201416,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\022_full.json",
+      "label": "full",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2543,
+        "complete_samples": 2543,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 218.98272705078125,
+      "peak_speed_ref": 218.0,
+      "peak_iq_ref": 0.6413179636001587,
+      "peak_tracking_error_rad": 0.004123210906982422,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": -500.0,
+        "Traj.profile_done": false,
+        "Traj.Y": 96.09249877929688,
+        "Traj.Yd": 20.0,
+        "Encoder.theta_mech": 93.23465728759766,
+        "Encoder.vel_mech": 218.35964965820312,
+        "MotorControl.iqRef": 0.526669979095459,
+        "FOC.Vbus_filt": 29.872699737548828,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\023_full.json",
+      "label": "full",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2550,
+        "complete_samples": 2550,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 219.14389038085938,
+      "peak_speed_ref": 218.0,
+      "peak_iq_ref": 0.6504417061805725,
+      "peak_tracking_error_rad": 0.0041656494140625,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": -500.0,
+        "Traj.profile_done": false,
+        "Traj.Y": 257.4645080566406,
+        "Traj.Yd": 20.0,
+        "Encoder.theta_mech": 254.44798278808594,
+        "Encoder.vel_mech": 217.62606811523438,
+        "MotorControl.iqRef": 0.5835034251213074,
+        "FOC.Vbus_filt": 29.871192932128906,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\024_full.json",
+      "label": "full",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2521,
+        "complete_samples": 2521,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 219.11883544921875,
+      "peak_speed_ref": 218.0,
+      "peak_iq_ref": 0.6570980548858643,
+      "peak_tracking_error_rad": 0.00396728515625,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": -500.0,
+        "Traj.profile_done": false,
+        "Traj.Y": 415.7445373535156,
+        "Traj.Yd": 20.0,
+        "Encoder.theta_mech": 412.8883972167969,
+        "Encoder.vel_mech": 217.05084228515625,
+        "MotorControl.iqRef": 0.5892528891563416,
+        "FOC.Vbus_filt": 29.8677921295166,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\025_full.json",
+      "label": "full",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2534,
+        "complete_samples": 2534,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 218.99411010742188,
+      "peak_speed_ref": 218.0,
+      "peak_iq_ref": 0.6361247897148132,
+      "peak_tracking_error_rad": 0.0050048828125,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": -500.0,
+        "Traj.profile_done": true,
+        "Traj.Y": 500.0,
+        "Traj.Yd": 0.0,
+        "Encoder.theta_mech": 499.9994201660156,
+        "Encoder.vel_mech": -0.062063224613666534,
+        "MotorControl.iqRef": 0.0,
+        "FOC.Vbus_filt": 29.852998733520508,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\026_full.json",
+      "label": "full",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2533,
+        "complete_samples": 2533,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 219.21676635742188,
+      "peak_speed_ref": 218.0,
+      "peak_iq_ref": 0.6906769275665283,
+      "peak_tracking_error_rad": 0.00537109375,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": 0.0,
+        "Traj.profile_done": false,
+        "Traj.Y": 352.011474609375,
+        "Traj.Yd": -20.0,
+        "Encoder.theta_mech": 354.3245849609375,
+        "Encoder.vel_mech": -218.2158203125,
+        "MotorControl.iqRef": -0.5774247050285339,
+        "FOC.Vbus_filt": 29.868688583374023,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\027_full.json",
+      "label": "full",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2510,
+        "complete_samples": 2510,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 219.3203887939453,
+      "peak_speed_ref": 218.0,
+      "peak_iq_ref": 0.6585479974746704,
+      "peak_tracking_error_rad": 0.003662109375,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": 0.0,
+        "Traj.profile_done": false,
+        "Traj.Y": 200.78347778320312,
+        "Traj.Yd": -20.0,
+        "Encoder.theta_mech": 202.8553924560547,
+        "Encoder.vel_mech": -217.93301391601562,
+        "MotorControl.iqRef": -0.5455251932144165,
+        "FOC.Vbus_filt": 29.869712829589844,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\028_full.json",
+      "label": "full",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2505,
+        "complete_samples": 2505,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 219.21934509277344,
+      "peak_speed_ref": 218.0,
+      "peak_iq_ref": 0.6501964926719666,
+      "peak_tracking_error_rad": 0.00437164306640625,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": 0.0,
+        "Traj.profile_done": false,
+        "Traj.Y": 49.367462158203125,
+        "Traj.Yd": -20.0,
+        "Encoder.theta_mech": 51.302364349365234,
+        "Encoder.vel_mech": -217.66943359375,
+        "MotorControl.iqRef": -0.5609235167503357,
+        "FOC.Vbus_filt": 29.868356704711914,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\029_full.json",
+      "label": "full",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2500,
+        "complete_samples": 2500,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 219.22174072265625,
+      "peak_speed_ref": 218.0,
+      "peak_iq_ref": 0.6452875137329102,
+      "peak_tracking_error_rad": 0.0050907135009765625,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": 0.0,
+        "Traj.profile_done": true,
+        "Traj.Y": -0.0,
+        "Traj.Yd": 0.0,
+        "Encoder.theta_mech": 0.0008971677743829787,
+        "Encoder.vel_mech": -0.0843241885304451,
+        "MotorControl.iqRef": 0.0,
+        "FOC.Vbus_filt": 29.8548641204834,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\030_moving_retarget.json",
+      "label": "moving_retarget",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2508,
+        "complete_samples": 2508,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 219.2713623046875,
+      "peak_speed_ref": 218.0,
+      "peak_iq_ref": 0.706202507019043,
+      "peak_tracking_error_rad": 0.005390167236328125,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": 500.0,
+        "Traj.profile_done": false,
+        "Traj.Y": -138.42449951171875,
+        "Traj.Yd": -20.0,
+        "Encoder.theta_mech": -136.3941192626953,
+        "Encoder.vel_mech": -217.54727172851562,
+        "MotorControl.iqRef": -0.5731278657913208,
+        "FOC.Vbus_filt": 29.86911392211914,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\031_moving_retarget.json",
+      "label": "moving_retarget",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2543,
+        "complete_samples": 2543,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 218.9204559326172,
+      "peak_speed_ref": 218.0,
+      "peak_iq_ref": 0.696570098400116,
+      "peak_tracking_error_rad": 0.0055999755859375,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": -30.0,
+        "Traj.profile_done": false,
+        "Traj.Y": -41.81847381591797,
+        "Traj.Yd": 20.0,
+        "Encoder.theta_mech": -43.829200744628906,
+        "Encoder.vel_mech": 218.23388671875,
+        "MotorControl.iqRef": 0.5486465096473694,
+        "FOC.Vbus_filt": 29.87734603881836,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\032_moving_retarget.json",
+      "label": "moving_retarget",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2531,
+        "complete_samples": 2531,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 219.22901916503906,
+      "peak_speed_ref": 218.0,
+      "peak_iq_ref": 0.6752138137817383,
+      "peak_tracking_error_rad": 0.006343364715576172,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": 300.0,
+        "Traj.profile_done": false,
+        "Traj.Y": -117.73251342773438,
+        "Traj.Yd": -20.0,
+        "Encoder.theta_mech": -115.81815338134766,
+        "Encoder.vel_mech": -218.21461486816406,
+        "MotorControl.iqRef": -0.5054341554641724,
+        "FOC.Vbus_filt": 29.837373733520508,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\033_moving_retarget.json",
+      "label": "moving_retarget",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2514,
+        "complete_samples": 2514,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 219.057373046875,
+      "peak_speed_ref": 218.0,
+      "peak_iq_ref": 0.7087039351463318,
+      "peak_tracking_error_rad": 0.0067138671875,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": -500.0,
+        "Traj.profile_done": false,
+        "Traj.Y": -45.71449279785156,
+        "Traj.Yd": 20.0,
+        "Encoder.theta_mech": -47.564720153808594,
+        "Encoder.vel_mech": 218.10572814941406,
+        "MotorControl.iqRef": 0.6188827157020569,
+        "FOC.Vbus_filt": 29.87687110900879,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    },
+    {
+      "file": "D:\\work\\jia_mo\\P50w\\P50w_Bootloader\\.mklink\\trap_range_500\\034_return.json",
+      "label": "return",
+      "samples": 2500,
+      "stats": {
+        "protocol_frames": 2532,
+        "complete_samples": 2532,
+        "parser_dropped_bytes": 0,
+        "parser_dropped_frames": 0,
+        "firmware_read_errors": 0,
+        "parser_crc_errors": 0,
+        "firmware_flagged_frames": 0,
+        "firmware_sample_drop_flags": 0
+      },
+      "peak_motor_speed": 159.62747192382812,
+      "peak_speed_ref": 159.90638732910156,
+      "peak_iq_ref": 0.5321115255355835,
+      "peak_tracking_error_rad": 0.0036411285400390625,
+      "jump_candidates": [],
+      "state": {
+        "MotorControl.ModeNow": "4 (Position_Mode)",
+        "MotorControl.posRef": 0.0,
+        "Traj.profile_done": true,
+        "Traj.Y": -0.0,
+        "Traj.Yd": 0.0,
+        "Encoder.theta_mech": -0.0003958093002438545,
+        "Encoder.vel_mech": 0.09089679270982742,
+        "MotorControl.iqRef": 0.0,
+        "FOC.Vbus_filt": 29.85783576965332,
+        "g_position_encoder_error": 0,
+        "g_position_encoder_fault_delta": 0,
+        "g_position_encoder_fault_ticks": 0,
+        "g_position_encoder_fault_limit": 0.0
+      }
+    }
+  ],
+  "commands": [
+    {
+      "posRef": -0.018664607778191566,
+      "time": 1793327980.8745532
+    },
+    {
+      "posRef": 10,
+      "time": 1793327983.7081947
+    },
+    {
+      "posRef": -30,
+      "time": 1793327994.2700427
+    },
+    {
+      "posRef": 30,
+      "time": 1793328004.6089275
+    },
+    {
+      "posRef": 0,
+      "time": 1793328014.6778061
+    },
+    {
+      "posRef": 100,
+      "time": 1793328024.8663967
+    },
+    {
+      "posRef": -100,
+      "time": 1793328035.2714546
+    },
+    {
+      "posRef": 0,
+      "time": 1793328055.661408
+    },
+    {
+      "posRef": -500,
+      "time": 1793328065.6327178
+    },
+    {
+      "posRef": 500,
+      "time": 1793328098.956443
+    },
+    {
+      "posRef": -500,
+      "time": 1793328157.6780748
+    },
+    {
+      "posRef": 0,
+      "time": 1793328213.1143537
+    },
+    {
+      "posRef": 500,
+      "time": 1793328244.9595737
+    },
+    {
+      "posRef": -30,
+      "time": 1793328253.5796573
+    },
+    {
+      "posRef": 300,
+      "time": 1793328263.4629815
+    },
+    {
+      "posRef": -500,
+      "time": 1793328272.5291367
+    },
+    {
+      "posRef": 0,
+      "time": 1793328281.280858
+    }
+  ],
+  "regions": [
+    {
+      "address": 536875908,
+      "size": 16
+    },
+    {
+      "address": 536873096,
+      "size": 8
+    },
+    {
+      "address": 536875716,
+      "size": 4
+    },
+    {
+      "address": 536875476,
+      "size": 4
+    },
+    {
+      "address": 536874800,
+      "size": 4
+    }
+  ],
+  "passed": true,
+  "final": {
+    "MotorControl.ModeNow": "0 (Motor_Disable)",
+    "MotorControl.iqRef": 0.0,
+    "MotorControl.current_limit": 30.020000457763672,
+    "MotorControl.speed_limit": 503.1156005859375,
+    "MotorControl.pos_maxspeed": 12.566370964050293
+  }
+}

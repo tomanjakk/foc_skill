@@ -1,0 +1,9 @@
+{
+  "source": "stage1.json",
+  "unique_updates": 4968,
+  "old_model_pp_v": 0.1256013772399065,
+  "new_model_pp_v": 0.09263960022100548,
+  "reduction_percent": 26.24316527671664,
+  "step_90_percent_ms_at_1khz": 78,
+  "note": "offline float64 model, current firmware not flashed; duplicate batches omitted; missing batches not reconstructed"
+}
