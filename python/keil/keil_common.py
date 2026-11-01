@@ -30,7 +30,27 @@ def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def flash_ranges(c):
+    entries = c.get('flash_ranges')
+    if not isinstance(entries, list) or not entries:
+        raise ValueError('请在 config.json 配置目标 Flash 范围 flash_ranges')
+    ranges = []
+    for entry in entries:
+        try:
+            start = int(str(entry['start']), 0)
+            end = int(str(entry['end_exclusive']), 0)
+        except (KeyError, TypeError, ValueError):
+            raise ValueError('Flash 范围必须包含有效的 start 和 end_exclusive')
+        if not 0 <= start < end <= 0x100000000:
+            raise ValueError('Flash 范围无效')
+        if any(start < old_end and old_start < end for old_start, old_end in ranges):
+            raise ValueError('Flash 范围重叠')
+        ranges.append((start, end))
+    return ranges
+
+
 def project_info(c):
+    flash_ranges(c)
     project = c['project']
     tree = ET.parse(project).getroot()
     targets = tree.findall('./Targets/Target')
@@ -93,7 +113,7 @@ def ihex(path):
     return data
 
 
-def axf_flash(path):
+def axf_flash(path, ranges):
     b = path.read_bytes()
     if b[:7] != b'\x7fELF\x01\x01\x01': raise ValueError('仅支持 32 位小端 ELF AXF')
     phoff = struct.unpack_from('<I', b, 28)[0]
@@ -102,8 +122,10 @@ def axf_flash(path):
     data = {}
     for i in range(count):
         typ, offset, _vaddr, physical, filesz, _memsz, _flags, _align = struct.unpack_from('<8I', b, phoff + i * entsize)
-        if typ != 1 or filesz == 0 or not (0x08000000 <= physical < 0x08080000): continue
-        if offset + filesz > len(b) or physical + filesz > 0x08080000: raise ValueError('AXF Flash 段越界')
+        if typ != 1 or filesz == 0: continue
+        if not any(start <= physical < end for start, end in ranges): continue
+        if offset + filesz > len(b) or not any(start <= physical and physical + filesz <= end for start, end in ranges):
+            raise ValueError('AXF Flash 段越界')
         for j, byte in enumerate(b[offset:offset + filesz]):
             if physical+j in data and data[physical+j] != byte: raise ValueError('AXF 段重叠')
             data[physical+j] = byte
@@ -113,7 +135,10 @@ def axf_flash(path):
 
 def image_info(c):
     hx = c['axf'].with_suffix('.hex')
-    hex_data = ihex(hx); elf_data = axf_flash(c['axf'])
+    ranges = flash_ranges(c)
+    hex_data = ihex(hx); elf_data = axf_flash(c['axf'], ranges)
+    if any(not any(start <= addr < end for start, end in ranges) for addr in hex_data):
+        raise ValueError('HEX 包含配置 Flash 范围之外的数据')
     if hex_data != elf_data: raise ValueError('AXF 与 HEX Flash 数据不一致')
     return {'start': min(hex_data), 'end_exclusive': max(hex_data)+1,
             'bytes': len(hex_data), 'axf_sha256': sha(c['axf']), 'hex_sha256': sha(hx)}

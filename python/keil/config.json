@@ -7,6 +7,7 @@
   "object_dir": "D:/work/jia_mo/P50w/P50w_Bootloader/MDK-ARM/STM32g474vet6",
   "log_dir": "logs",
   "timeout_seconds": 180,
+  "flash_ranges": [{"start": "0x08000000", "end_exclusive": "0x08080000"}],
   "mklink_sdk_path": "D:/exe/Mklink-AI-Probe/_internal",
   "mklink_probe": "usb-089b0c679ae923e0811f84b1"
 }

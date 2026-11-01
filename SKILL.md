@@ -1,11 +1,18 @@
 ---
 name: foc-skill
-description: 面向 FOC 代码移植和调试的工作流；当前提供 Keil 工程检查、编译、烧录及 MKLink 共享后台和符号操作的基础流程。
+description: 协助将现有 FOC 移植到目标 MCU 并分阶段调试，覆盖 PWM/ADC、编码器、校准存储、IAP，以及 Keil 和 MKLink 工具。
 ---
 
 # FOC 移植与调试
 
-此 Skill 的目标是协助将 FOC 代码移植到目标工程并进行调试。当前版本仅建立 Keil 和 MKLink 基础工具流程；FOC 移植分析、板级适配与控制调试流程尚未完成，不能宣称已经支持自动移植或调试。
+此 Skill 协助将用户提供的 FOC 代码移植到目标工程并调试，包含 PWM/ADC、编码器、校准存储、IAP 和历史调试经验。配套工具支持 Keil 工程检查、编译、烧录，以及 MKLink 符号重载和变量读取。各专题是适配与验证指导，不等于自动移植或板级验证完成；FOC 算法源码须由用户提供或从目标工程确认。
+
+## 移植顺序
+
+1. 确认 FOC 源码版本、目标工程和 MCU、原理图、工具链及本次操作范围；检查现有工程及未提交改动。缺失的硬件资料或未确认的配置记录为待确认。
+2. 按目标硬件整理 PWM、ADC、电流采样电路、编码器、非易失存储和故障保护资源；确定相序、通道映射、时钟、存储分区及接口归属。先处理冲突，不复制实例地址或引脚。
+3. 依照各专题文档适配端口及参数，核对采样、控制执行、角度、电流换算和存储调用链；修改前说明文件、函数、原因和影响范围。
+4. 先做源码、配置、分区和调用链静态检查，再按用户授权分别执行编译、下载、设备采集和运行。按 PWM/ADC、编码器、校准和控制环逐阶段验证，记录证据及未测项目；静态配置不能代替波形和实机数据。
 
 分析 FOC 的参数辨识、电流环、采样或轨迹调试时，按需读取 [历史调试经验](references/foc-debug-evidence.md)。这些经验是历史案例和检查思路，不能替代目标工程的源码分析和实测。
 
@@ -15,7 +22,7 @@ description: 面向 FOC 代码移植和调试的工作流；当前提供 Keil �
 
 移植或修改校准数据保存、恢复及 IAP 升级时，读取 [校准数据存储与 IAP 升级](references/storage-and-iap.md)，结合目标工程核对全部存储分区、擦写约束和升级协议。
 
-默认中文沟通。先确认 FOC 来源、用户指定的目标工程、Target、工具链和操作范围。`python/keil/config.json` 包含初始工程配置；移植到其他目标时，核对并按需修改目标配置，同时检查脚本中的目标芯片及工程固定假设。配置中的相对路径以配置文件所在目录为基准，不修改无关项目。
+默认中文沟通。先确认 FOC 来源、用户指定的目标工程、Target、工具链和操作范围。`python/keil/config.json` 包含初始工程配置；移植到其他目标时先按 [工具配置说明](python/keil/README.md) 检查和修改配置。路径类配置的相对路径以配置文件所在目录为基准，不修改无关项目。
 
 ## 操作边界
 
@@ -26,25 +33,25 @@ description: 面向 FOC 代码移植和调试的工作流；当前提供 Keil �
 
 ## Keil
 
-从此 Skill 目录执行，使用配置中指定的 Python：
+从此 Skill 目录执行，使用本机已安装的 Python：
 
 ```powershell
-& 'D:/my_exe/python-3.9.13/python.exe' python/keil/keil_check.py
-& 'D:/my_exe/python-3.9.13/python.exe' python/keil/keil_build.py
-& 'D:/my_exe/python-3.9.13/python.exe' python/keil/keil_flash.py
+python python/keil/keil_check.py
+python python/keil/keil_build.py
+python python/keil/keil_flash.py
 ```
 
-检查脚本读取工程及下载配置，不启动 Keil 或连接设备。先核对输出路径、Target 和实际下载设置；`partitions` 和 AXF Flash 范围检查是原工程及 G474 的固定假设，不可用于断言其他工程的分区安全。编译脚本执行完整重建并检查终态、产物新鲜度和 AXF/HEX 一致性；烧录脚本独立触发重建。根据本次日志报告结果，不以旧日志代替实际执行。
+检查脚本读取工程及下载配置，不启动 Keil 或连接设备。先核对输出路径、Target、`flash_ranges` 和实际下载设置；镜像范围检查不检查分区安全，也不约束下载擦除范围。编译脚本执行完整重建并检查终态、产物新鲜度和 AXF/HEX 一致性；烧录脚本独立触发重建。根据本次日志报告结果，不以旧日志代替实际执行。
 
 ## MKLink
 
-现有脚本使用 `config.json` 中的 `mklink_sdk_path` 和 `mklink_probe`。它们只查找已存在的共享后台，不启动后台或建立新的探针连接；需要用户先在 MKLink 中连接目标。核对当前设备、固件和 AXF 匹配，不能仅凭路径相同认定固件一致。
+现有脚本使用 `config.json` 中的 `mklink_sdk_path` 和 `mklink_probe`。它们只查找已存在的共享后台，不启动后台或建立新的探针连接；需要用户先在 MKLink 中连接目标。脚本从配置目录加载 MKLink 包并检查来源和所需接口；后台协议兼容性仍需实际核对。核对当前设备、固件和 AXF 匹配，不能仅凭路径相同认定固件一致。
 
 ```powershell
-& 'D:/my_exe/python-3.9.13/python.exe' python/mklink/reload_symbols.py
-& 'D:/my_exe/python-3.9.13/python.exe' python/mklink/read_variables.py FOC.Vbus FOC.Vbus_filt
+python python/mklink/reload_symbols.py
+python python/mklink/read_variables.py FOC.Vbus FOC.Vbus_filt
 ```
 
 重载脚本要求后台当前 AXF 路径与配置相同；读取脚本一次支持 1 至 16 个不重复的符号。重载或读取失败时报告原始错误和后台状态，不自动切换工程、重置设备或重试写入。MKLink 内部运行库接口可能随版本变化。
 
-复制的 `python/keil/README.md` 和 `python/README.md` 中的工程相对路径针对原目录；实际路径以本目录 `config.json` 和本文件为准。离线测试不能证明下载或设备连接成功。
+历史脚本和归档文件可能依赖原工程路径；实际路径以本目录 `config.json` 和工具配置说明为准。离线测试不能证明下载或设备连接成功。

@@ -1,55 +1,37 @@
-# Keil 编译与下载脚本
+# Keil 与 MKLink 工具配置
 
-使用 Python 标准库。编辑 `config.json` 设置 Keil、工程、Target、输出和日志路径；相对路径以本目录为基准。当前配置：
+本目录的 `config.json` 是历史工程配置，不是其他电脑或工程的默认配置。首次使用或更换目标前，复制记录现有配置，再根据目标工程修改；相对路径以 `config.json` 所在目录为基准。不得通过填写错误范围来使检查通过。
 
-此前的 `codex_*.uvprojx`、配套 `.uvoptx` 和 `MDK-ARM` 根目录历史日志已归档到 `archive/MDK-ARM/`。这些工程的相对路径以原目录为基准，若需使用应先将相应工程和配置文件恢复到 `MDK-ARM`。历史文档与一次性脚本中提到的原路径同样需先恢复后才能使用。
+| 配置项 | 应填写或核对的内容 |
+|---|---|
+| `python_executable` | 本机 Python 可执行文件路径；检查工具会验证该文件存在。运行命令使用的 Python 应与预期环境一致。 |
+| `uv4_executable` | 本机 Keil `UV4.exe` 路径。 |
+| `project`、`target` | 目标 `.uvprojx` 的路径和准确 Target 名称；确认对应 `.uvoptx` 是当前保存的下载配置。 |
+| `axf`、`object_dir` | Target 实际输出的 AXF 与输出目录；必须与工程配置一致，且工程启用 AXF 和 HEX。 |
+| `log_dir`、`timeout_seconds` | 本机日志目录和编译超时时间；日志只证明对应那次执行。 |
+| `flash_ranges` | 根据目标实际地址映射配置镜像 Flash 地址范围，可指定多个不重叠区间；`start` 含首地址、`end_exclusive` 不含尾地址，使用十六进制字符串。此项只用于检查 AXF/HEX 内容一致与地址范围，**不检查分区或下载器擦除范围**。 |
+| `mklink_sdk_path` | MKLink 桌面程序附带的 Python 运行库根目录，目录下应存在 `mklink/__init__.py` 和 `mklink/runtime.py`；必须与当前后台版本兼容。 |
+| `mklink_probe` | 当前使用的探针稳定 ID；更换探针后重新确认，不照搬历史 ID。 |
 
-- 工程：`P50w_Bootloader/MDK-ARM/STM32g474vet6.uvprojx`，Target：`STM32g474vet6`。
-- AXF：`P50w_Bootloader/MDK-ARM/STM32g474vet6/STM32g474vet6.axf`；`.o` 和 HEX 在同一目录。
-- 日志和上一次成功构建记录：`P50w_Bootloader/python/keil/logs/`。
+例如 `"flash_ranges": [{"start": "0x08000000", "end_exclusive": "0x08080000"}]` 表示 `[0x08000000, 0x08080000)`；只是格式示例，不能证明目标具备该容量或该区域可擦写。更换 MCU、Bank 配置或工程后，结合手册、链接设置及实际硬件重新确定。
 
-在仓库根目录运行：
+## 首次检查和执行
 
-```powershell
-python P50w_Bootloader/python/keil/keil_check.py
-python P50w_Bootloader/python/keil/keil_build.py
-python P50w_Bootloader/python/keil/test_keil_tools.py
-```
+在 Skill 根目录执行 `python python/keil/keil_check.py`。它读取已保存的工程和下载配置，不启动 Keil、不连接设备；核对输出中的 Target、路径、芯片、Flash 范围和下载配置。缺少 Flash 范围或配置错误时先修正；编译产物不存在时不会据此声称镜像一致。检查结果不证明固件分区、校准数据或擦除策略安全。
 
-`keil_build.py` 对指定 Target 执行完整重建；必须有本次更新的 AXF、HEX、Keil 终态日志和零错误，且 AXF/HEX Flash 内容一致才记录成功。未出现日志终态、非零退出码、旧文件或解析失败均报告失败。每次构建先移除上次成功记录。
+有编译授权时运行 `python python/keil/keil_build.py`。它完整重建，并核对日志终态、产物新鲜度和 AXF/HEX 数据。烧录 `python python/keil/keil_flash.py` 会重新编译并使用 Keil 已保存的下载器与擦除设置，**不限制擦除范围**；先确认目标、算法、下载范围和所有保留数据，并取得对应授权。
 
-Keil 中打开的工程可能缓存 `.uvprojx` 设置；本脚本不会控制已打开窗口，如输出设置被窗口重新覆盖，检查会报路径不一致。若出现 `.d` 文件被映射占用，请关闭相关 Keil 窗口后重试。
+使用 MKLink 前由用户启动程序并连接目标。按授权运行 `python python/mklink/reload_symbols.py` 或 `python python/mklink/read_variables.py FOC.Vbus`。脚本使用配置指定的 SDK；版本或接口不兼容时报告错误，不自动切换 SDK、工程或后台。符号文件摘要一致不证明 MCU 内实际固件相同。
 
-## 烧录
+## 离线测试和历史文件
 
-```powershell
-python P50w_Bootloader/python/keil/keil_flash.py
-```
-
-脚本先完整重建，再使用 Keil 工程已有的下载器、Flash 算法和擦除设置烧录；编译失败不会执行烧录，日志显示擦除、编程和校验完成后才报告成功。Keil 窗口可以打开或关闭；修改代码和下载配置后应先保存。
-
-J-Link 和 MKLink 在 Keil 中选择对应驱动，脚本不修改下载配置。**脚本不限制擦除区域**：若 Keil 选择整片擦除，会影响 APP、有效标记和片内数据。当前截图显示的是 Erase Sectors；实际设置以已保存的 Keil 工程为准。
-
-## MKLink 重新加载符号
-
-Keil 烧录成功后，若 MKLink 报告 AXF 已变化或等待重新加载，执行：
+在 Skill 根目录执行：
 
 ```powershell
-python P50w_Bootloader/python/mklink/reload_symbols.py
+python python/keil/test_keil_tools.py
+python python/mklink/test_sdk_loader.py
+python python/mklink/test_read_variables.py
+python python/mklink/test_reload_symbols.py
 ```
 
-只查询并重载配置中指定的已有 MKLink 共享后台和当前 AXF，不启动新后台、不下载、不修改 MCU；符号已是最新时直接报告 `already_current`。用于验证的 `--force` 会强制重载一次。请求由后台仲裁，遇到冲突或版本不匹配会报错，不会断开或强制停止其他操作。
-
-配置项 `mklink_sdk_path` 指向桌面版当前附带的 Python 运行库，`mklink_probe` 为设备稳定 ID；更换安装路径或下载器后应更新这两项。脚本使用桌面端同一重载接口，MKLink 升级时该内部接口或运行库布局可能变化。重载后应重新连接使用旧符号版本的客户端。
-
-验证：`python P50w_Bootloader/python/mklink/test_reload_symbols.py`；2026-10-30 已通过 MKLink 0.4.1 强制重载，并实际读取 FOC.Vbus 和 FOC.Vbus_filt。
-
-## 读取 MKLink 变量
-
-```powershell
-python P50w_Bootloader/python/mklink/read_variables.py testmklnik FOC.Vbus FOC.Vbus_filt
-```
-
-可按需替换变量名，一次最多 16 个。SuperWatch 停止时直接读取；运行中读取共享采集的最新快照，未在采集中的变量会加入观察项。加入观察项可能导致后台短暂重配置采集，但脚本不主动停止采集、不删除现有观察项。读取结果包含来源；共享快照还包含时间差和序号。符号过期时先运行重载脚本。
-
-读取工具使用同一 `mklink_sdk_path` 和 `mklink_probe` 配置。2026-10-30 已实测停止采集时的直接读取；运行中分支通过离线模拟验证，尚未用该脚本做实机采集验证。
+这些测试使用临时文件或模拟后台，不启动 Keil、不连接设备。`archive/MDK-ARM/` 和 `logs/` 是历史工程或日志，路径与当时环境相关，只作参考，不作为当前构建或下载成功的证据。其他历史脚本可能修改源码、写设备或驱动电机，不因存在而执行。

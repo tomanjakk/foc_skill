@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 import sys
 import time
+from sdk_loader import load_runtime
 
 CONFIG = Path(__file__).resolve().parents[1] / 'keil/config.json'
 
@@ -48,15 +49,11 @@ def main():
     parser.add_argument('names', nargs='+', help='变量名，例如 FOC.Vbus_filt')
     args = parser.parse_args()
     cfg = json.loads(CONFIG.read_text(encoding='utf-8'))
-    sdk = Path(cfg['mklink_sdk_path']).resolve()
-    if not (sdk / 'mklink/runtime.py').is_file():
-        raise ValueError(f'MKLink Python 运行库不存在: {sdk}')
-    sys.path.append(str(sdk))
-    from mklink.runtime import request, selected_runtime
-    info = selected_runtime(cfg['mklink_probe'])
+    runtime = load_runtime(CONFIG.parent / cfg['mklink_sdk_path'])
+    info = runtime.selected_runtime(cfg['mklink_probe'])
     if info is None:
         raise RuntimeError('未找到配置的 MKLink 共享后台，请先连接目标')
-    print(json.dumps(read_variables(info, request, args.names), ensure_ascii=False, indent=2))
+    print(json.dumps(read_variables(info, runtime.request, args.names), ensure_ascii=False, indent=2))
 
 
 if __name__ == '__main__':

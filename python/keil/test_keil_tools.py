@@ -5,12 +5,33 @@ import unittest
 from unittest.mock import patch
 
 import keil_build
-from keil_common import build_result, ihex, run_keil
+from keil_common import build_result, ihex, run_keil, flash_ranges, axf_flash
+import struct
 import keil_flash
 from keil_flash import flash_result
 
 
 class KeilTools(unittest.TestCase):
+    def test_flash_ranges_are_explicit_and_validated(self):
+        with self.assertRaisesRegex(ValueError, 'flash_ranges'): flash_ranges({})
+        with self.assertRaisesRegex(ValueError, '重叠'):
+            flash_ranges({'flash_ranges': [{'start': '0x1000', 'end_exclusive': '0x2000'},
+                                          {'start': '0x1fff', 'end_exclusive': '0x3000'}]})
+        self.assertEqual(flash_ranges({'flash_ranges': [{'start': '0x1000', 'end_exclusive': '0x2000'}]}), [(0x1000, 0x2000)])
+
+    def test_axf_uses_configured_range_and_rejects_crossing(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            p = Path(tmp) / 'test.axf'
+            data = bytearray(86)
+            data[:7] = b'\x7fELF\x01\x01\x01'
+            struct.pack_into('<I', data, 28, 52)
+            struct.pack_into('<HH', data, 42, 32, 1)
+            struct.pack_into('<8I', data, 52, 1, 84, 0, 0x1000, 2, 2, 0, 1)
+            data[84:] = b'AB'
+            p.write_bytes(data)
+            self.assertEqual(axf_flash(p, [(0x1000, 0x2000)]), {0x1000: 65, 0x1001: 66})
+            with self.assertRaisesRegex(ValueError, '越界'): axf_flash(p, [(0x1000, 0x1001)])
+
     def test_log_terminal_and_errors(self):
         self.assertIsNone(build_result('compiling...'))
         self.assertEqual(build_result('"Objects/one.axf" - 2 Error(s), 1 Warning(s).')[1:], ('2', '1'))

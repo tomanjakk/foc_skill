@@ -12,7 +12,7 @@ try:
                  'python_configured': str(c['python_executable']), 'uv4': str(c['uv4_executable']),
                  'project': str(c['project']), 'target': c['target'], 'axf': str(c['axf']),
                  'log_dir': str(c['log_dir']), 'erase_range': '由 Keil 下载设置决定，脚本不限制范围',
-                 'partitions': {'boot_start': '0x08000000', 'marker': '0x08018800', 'app_start': '0x08019000'}})
+                 'flash_ranges': c['flash_ranges'], 'partition_check': '未检查分区、保留数据或下载擦除范围'})
     try: info['existing_image'] = image_info(c)
     except (OSError, ValueError) as e: info['existing_image'] = f'不可确认: {e}'
     print(json.dumps(info, ensure_ascii=False, indent=2))
